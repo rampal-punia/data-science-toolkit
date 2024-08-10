@@ -1,7 +1,7 @@
-# Comprehensive Docker Tutorial for Data Scientists
+# Comprehensive Docker Tutorial for Data Science
 
 ## Introduction to Docker
-Docker is a platform for developing, shipping, and running applications in containers. For data scientists, Docker provides a way to create reproducible environments, package applications with their dependencies, and ensure consistency across different systems.
+Docker is a platform for developing, shipping, and running applications in containers. For data science, Docker provides a way to create reproducible environments, package applications with their dependencies, and ensure consistency across different systems.
 
 ## Basic Docker Commands
 
@@ -187,7 +187,7 @@ docker-compose up -d
 
 This will start a Jupyter notebook server and a PostgreSQL database, which is a common setup for data science projects.
 
-## Best Practices for Data Scientists
+## Best Practices for Data Science
 
 1. Use specific tags for images to ensure reproducibility.
 2. Use volumes to persist data and share it between the host and containers.

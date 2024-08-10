@@ -24,7 +24,7 @@ Key topics covered:
 
 ### docker_commands.md
 
-Docker is a platform for developing, shipping, and running applications in containers. This file offers a comprehensive tutorial on Docker commands, tailored specifically for data scientists.
+Docker is a platform for developing, shipping, and running applications in containers. This file offers a comprehensive tutorial on Docker commands, tailored specifically for data science.
 
 Key topics covered:
 - Basic Docker operations

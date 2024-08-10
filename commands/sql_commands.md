@@ -252,7 +252,7 @@ FROM sales
 GROUP BY product;
 ```
 
-## Best Practices for Data Scientists
+## Best Practices for Data Science
 
 1. **Use appropriate indexing**: Properly indexed tables can significantly speed up query performance.
 

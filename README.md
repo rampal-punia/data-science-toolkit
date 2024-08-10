@@ -19,7 +19,7 @@ The Data Science Toolkit is a curated collection of resources covering a wide ra
 ## Repository Structure
 
 ```
-data-scientists-toolkit/
+data-science-toolkit/
 ├── README.md
 ├── LICENSE
 ├── .gitignore

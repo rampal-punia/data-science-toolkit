@@ -1,4 +1,4 @@
-# Essential Git Commands for Data Scientists
+# Essential Git Commands for Data Science
 
 ## Configuration
 

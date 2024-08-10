@@ -1,4 +1,4 @@
-# Essential Bash Commands for Data Scientists
+# Essential Bash Commands for Data Science
 
 1. `ls`
     ```bash    

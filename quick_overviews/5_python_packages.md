@@ -579,7 +579,7 @@ Certainly, here’s the continuation:
   concatenated_df = pd.concat([df1, df2])
   ```
 
-These commands and functions cover a broad range of data manipulation and analysis tasks in Pandas, essential for Data Scientists.
+These commands and functions cover a broad range of data manipulation and analysis tasks in Pandas, essential for Data Science.
 
 ## Matplotlib
 
