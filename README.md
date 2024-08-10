@@ -22,15 +22,6 @@ The Data Science Toolkit is a curated collection of resources covering a wide ra
 data-science-toolkit/
 ├── .gitignore
 ├── LICENSE
-├── qna_algorithms.md
-├── qna_devops_mlops.md
-├── qna_ds_ai_ml_nlp_1.md
-├── qna_ds_ai_ml_nlp_2.md
-├── qna_keras_tensorflow.md
-├── qna_math_for_ds.md
-├── qna_python.md
-├── qna_pytorch.md
-├── qna_sql.md
 ├── README.md
 ├── commands/
 │   ├── bash_commands.md
@@ -47,12 +38,21 @@ data-science-toolkit/
 │   ├── probability_and_statistics.md
 │   ├── related_functions.md
 │   └── time_series_analysis.md
+├── QnA/
+│   ├── qna_algorithms.md
+│   ├── qna_devops_mlops.md
+│   ├── qna_ds_ai_ml_nlp_1.md
+│   ├── qna_ds_ai_ml_nlp_2.md
+│   ├── qna_keras_tensorflow.md
+│   ├── qna_math_for_ds.md
+│   ├── qna_python.md
+│   ├── qna_pytorch.md
+│   ├── qna_sql.md
 ├── quick_overviews/
-│   ├── 1_python.md
+│   ├── 1_python_dsa.md
 │   ├── 2_maths_for_ds.md
 │   ├── 3_ai_ml_ds_nlp.md
-│   ├── 4_algorithms.md
-│   └── 5_python_packages.md
+│   └── 4_python_packages.md
 └── useful_functions/
     ├── data_visualization_examples.ipynb
     ├── deep_learning_examples.ipynb
