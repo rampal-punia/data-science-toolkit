@@ -1,0 +1,175 @@
+# Essential Git Commands for Data Scientists
+
+## Configuration
+
+```bash
+# Set your name for all local repositories
+git config --global user.name "Your Name"
+
+# Set your email for all local repositories
+git config --global user.email "your.email@example.com"
+```
+
+## Repository Setup
+
+```bash
+# Initialize a new Git repository in the current directory
+git init
+
+# Clone an existing repository
+git clone https://github.com/user/repository.git [directory_name]
+# If [directory_name] is omitted, Git will create a directory based on the repository name
+```
+
+## Basic Commands
+
+```bash
+# Check the status of your working directory
+git status
+
+# View commit history
+git log
+# For a more concise, one-line format:
+git log --oneline
+
+# Add a specific file to the staging area
+git add filename
+
+# Add all changed files to the staging area
+git add .
+
+# Commit staged changes
+git commit -m "Descriptive commit message"
+```
+
+## Branching and Merging
+
+```bash
+# List all branches (* indicates the current branch)
+git branch
+
+# Create a new branch
+git branch branch_name
+
+# Switch to a different branch
+git checkout branch_name
+
+# Create and switch to a new branch in one command
+git checkout -b new_branch_name
+
+# Merge a branch into the current branch
+git merge branch_name
+
+# Delete a branch (use -D instead of -d to force deletion)
+git branch -d branch_name
+```
+
+## Remote Repositories
+
+```bash
+# Add a remote repository
+git remote add origin https://github.com/user/repository.git
+
+# Fetch changes from a remote repository and merge into current branch
+git pull origin branch_name
+
+# Push local changes to a remote repository
+git push origin branch_name
+
+# Push a new local branch to a remote repository
+git push -u origin new_branch_name
+```
+
+## Stashing
+
+```bash
+# Temporarily store modified, tracked files
+git stash
+
+# List all stashes
+git stash list
+
+# Apply a stash and remove it from the stash list
+git stash pop
+
+# Apply a specific stash
+git stash apply stash@{index}
+```
+
+## Advanced Operations
+
+```bash
+# Rebase current branch onto another branch
+git rebase branch_name
+
+# Interactive rebase for editing, squashing, or reordering commits
+git rebase -i HEAD~n  # n is the number of commits to go back
+
+# Cherry-pick a specific commit to apply to the current branch
+git cherry-pick commit_hash
+
+# Revert a commit, creating a new commit with the inverse of the reverted commit
+git revert commit_hash
+
+# Soft reset: move HEAD to a previous commit, but keep changes staged
+git reset --soft commit_hash
+
+# Hard reset: move HEAD to a previous commit and discard all changes
+git reset --hard commit_hash
+
+# Amend the most recent commit
+git commit --amend -m "New commit message"
+```
+
+## Tagging
+
+```bash
+# Create an annotated tag
+git tag -a v1.0 -m "Version 1.0"
+
+# List all tags
+git tag
+
+# Push tags to a remote repository
+git push origin --tags
+```
+
+## Inspection and Comparison
+
+```bash
+# Show the author and revision of each line in a file
+git blame filename
+
+# Show differences between two commits
+git diff commit_hash1 commit_hash2
+
+# Show differences between working directory and last commit
+git diff
+```
+
+## Working with .gitignore
+
+```bash
+# Remove a cached directory (useful when adding to .gitignore)
+git rm -r --cached directory_name
+git commit -m "Stop tracking directory_name"
+
+# Add .gitignore file to version control
+git add .gitignore
+git commit -m "Add .gitignore file"
+```
+
+## Submodules
+
+```bash
+# Add a submodule to your repository
+git submodule add https://github.com/user/repository.git
+
+# Initialize submodules in a cloned repository
+git submodule init
+
+# Update submodules to their latest commits
+git submodule update --remote
+```
+
+Remember to replace `commit_hash`, `branch_name`, `filename`, etc., with actual values when using these commands. Always be cautious when using commands that can potentially discard changes (like `git reset --hard`).
