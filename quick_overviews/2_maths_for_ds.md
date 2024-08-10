@@ -1,4 +1,8 @@
-Here is a list of 51 important keywords related to probability and statistics, along with their brief definitions:
+# Mathematics related to Data Science
+
+## Probability & Statistics
+
+Here is a list of important keywords related to probability and statistics, along with their brief definitions:
 
 1. **Probability**: The measure of the likelihood that an event will occur, ranging from 0 to 1.
 
@@ -108,7 +112,7 @@ This list covers essential concepts in probability and statistics that are often
 
 ## Linear Algebra & Calculus
 
-Here is a list of 51 important keywords related to linear algebra and calculus, along with their brief definitions:
+Here is a list of important keywords related to linear algebra and calculus, along with their brief definitions:
 
 ### Linear Algebra
 
