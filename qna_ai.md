@@ -1,10 +1,10 @@
-# AI: Questions
+# AI: Questions And Answers
 
 ## Question 1
 
 Explain in detail what is the Min-Max algorithm in AI. Also Write a Python Program to implement Min-Max Algorithm.
 
-## Answer
+### Answer
 
 The Minimax algorithm is a decision-making algorithm used in artificial intelligence (AI) and game theory. It is commonly used in turn-based games like **chess**, **checkers**, and **tic-tac-toe**. The goal of the Minimax algorithm is to find the optimal move for a player, assuming that the opponent is also playing optimally.
 
@@ -166,7 +166,7 @@ The provided program outputs the best move for the maximizer given the current s
 Explain in detail the N-Queen problem in AI. Also write a Python program to solve N-Queen problem without using recursion.
 
 
-## Answer
+### Answer
 
 The N-Queen problem is a classic combinatorial problem in computer science and artificial intelligence. **It involves placing N chess queens on an N×N chessboard so that no two queens threaten each other**. In chess, a queen can attack along the same row, column, or diagonal.
 
@@ -247,7 +247,7 @@ This approach demonstrates how to solve the N-Queen problem iteratively, using a
 
 Write a Python Program to implement the Backtracking approach to solve N Queen's problem.
 
-## Answer:
+### Answer:
 
 Python program that implements the backtracking approach to solve the N Queens problem:
 
@@ -331,7 +331,7 @@ This approach systematically explores all possible configurations until it finds
 
 What is the Breadth First search. 
 
-## Answer:
+### Answer:
 
 Breadth-First Search (BFS) is a fundamental graph traversal algorithm in AI and computer science. **It's used to explore nodes in a graph or tree data structure, starting from a root node and exploring all neighboring nodes at the present depth before moving to nodes at the next depth level**.
 
@@ -421,7 +421,7 @@ Understanding these aspects of BFS is crucial for anyone working in AI, as it fo
 
 Write a Python Program to implement Breadth First Search. 
 
-## Answer:
+### Answer:
 
 A Python program that implements Breadth First Search (BFS) for a graph:
 
@@ -510,7 +510,7 @@ This implementation is versatile and can be easily modified for various applicat
 
 What is the alpha-beta pruning in AI? Write a Python Program to implement the Alpha-Beta Pruning.
 
-# Answer:
+### Answer:
 
 Alpha-Beta Pruning is an **optimization technique for the Minimax algorithm**. It reduces the number of nodes evaluated in the search tree by eliminating branches that cannot possibly influence the final decision. This pruning process helps improve the efficiency of the Minimax algorithm, **allowing it to search deeper in the game tree** within the same amount of time.
 
@@ -671,7 +671,7 @@ The provided program outputs the best move for the maximizer given the current s
 
 Explain in detail the Depth First Search algorithm in AI.
 
-## Answer:
+### Answer:
 
 Depth First Search (DFS) is a fundamental graph traversal algorithm used in artificial intelligence and computer science to explore nodes and edges of a graph. **It is used to systematically visit all the vertices and edges of a graph in a depthward motion**.
 
@@ -798,7 +798,7 @@ DFS is a versatile algorithm with a wide range of applications in computer scien
 
 Write a Python Program to implement Depth First Search.
 
-## Answer:
+### Answer:
 Here is a Python program to implement Depth First Search (DFS) for both recursive and iterative approaches. This example uses a graph represented as an adjacency list.
 
 ### Recursive Approach:
@@ -922,7 +922,7 @@ This implementation demonstrates how DFS can be applied to traverse a graph, sho
 
 What is the Iterative Deepening Depth First search (IDDFS) in AI?
 
-## Answer:
+### Answer:
 
 **Iterative Deepening Depth-First Search (IDDFS) is a hybrid search strategy that combines the depth-first search (DFS) and breadth-first search (BFS) approaches**. It is particularly useful in scenarios where the depth of the solution is unknown, and it provides the benefits of both DFS and BFS.
 
@@ -1137,7 +1137,7 @@ This implementation prints the depth being searched at each iteration, which hel
 
 Exaplin in detail what is the Best First Search algorithm in AI?
 
-## Answer:
+### Answer:
 
 Best First Search (BFS) is a search algorithm that traverses a graph by expanding the most promising node chosen according to a specified rule or heuristic. The key idea is to use a **priority queue** (usually implemented with a `min-heap`) to always expand the node with the lowest cost or highest priority first. This algorithm is often used in pathfinding and graph traversal problems, especially when trying to find the shortest path or the optimal solution based on a heuristic function.
 
@@ -1312,7 +1312,7 @@ Best First Search is a powerful algorithm in AI, offering a balance between effi
 
 Explain in detail, what is the A* algorithm in Ai?
 
-## Answer
+### Answer
 
 The A* algorithm is one of the most popular and widely used **pathfinding algorithms** in AI. It is an extension of the Best First Search algorithm and incorporates both the actual cost to reach the node and the estimated cost to reach the goal, which makes it optimal and complete.
 

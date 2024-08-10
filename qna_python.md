@@ -4,7 +4,7 @@
 
 Can you explain a situation where it is preferrable to choose a list over a tuple in Python, and vice versa?
 
-#### Answer:
+### Answer:
 Choosing a list over a tuple, and vice versa:
 
 A list is chosen when a mutable sequence is required, like for a shopping cart where items can be added or removed. Lists are great for dynamic data that changes frequently. 
