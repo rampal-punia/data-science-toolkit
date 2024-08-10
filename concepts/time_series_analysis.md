@@ -1,7 +1,5 @@
 ## Time Series Analysis
 
-Here is a list of 51 important keywords related to time series analysis, along with their brief definitions:
-
 1. **Time Series**: A sequence of data points collected or recorded at specific time intervals, often used to analyze trends, patterns, and forecasting.
 
 2. **Seasonality**: A repeating pattern or fluctuation in a time series that occurs at regular intervals, such as daily, monthly, or yearly.
@@ -103,5 +101,3 @@ Here is a list of 51 important keywords related to time series analysis, along w
 50. **Autocovariance**: The covariance of a time series with its own past values, used to measure the degree of dependence between different time points.
 
 51. **Time Series Decomposition**: The process of separating a time series into its underlying components (trend, seasonality, and residuals) to better understand its behavior.
-
-This list covers key concepts and techniques in time series analysis that are fundamental for understanding, modeling, and forecasting time-dependent data.

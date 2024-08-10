@@ -105,4 +105,3 @@
 
 51. **Bayesian Network**: A graphical model that represents probabilistic relationships among variables, used for reasoning under uncertainty.
 
-This list covers essential concepts in machine learning that are fundamental for understanding and applying various algorithms and techniques.

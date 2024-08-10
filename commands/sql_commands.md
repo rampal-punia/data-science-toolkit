@@ -1,8 +1,8 @@
-# Comprehensive SQL Tutorial for Data Science
+# Comprehensive SQL for Data Science
 
 ## Introduction
 
-SQL (Structured Query Language) is an essential tool for data scientists, used for managing, manipulating, and analyzing relational databases. This tutorial covers key SQL commands and concepts, with a focus on data science applications.
+SQL (Structured Query Language) is an essential tool for data scientists, used for managing, manipulating, and analyzing relational databases. This covers key SQL commands and concepts, with a focus on data science applications.
 
 ## Table of Contents
 
