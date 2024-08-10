@@ -23,6 +23,16 @@ data-science-toolkit/
 ├── .gitignore
 ├── LICENSE
 ├── README.md
+├── QnA/
+│   ├── qna_algorithms.md
+│   ├── qna_devops_mlops.md
+│   ├── qna_ds_ai_ml_nlp_1.md
+│   ├── qna_ds_ai_ml_nlp_2.md
+│   ├── qna_keras_tensorflow.md
+│   ├── qna_math_for_ds.md
+│   ├── qna_python.md
+│   ├── qna_pytorch.md
+│   ├── qna_sql.md
 ├── commands/
 │   ├── bash_commands.md
 │   ├── docker_commands.md
@@ -38,16 +48,6 @@ data-science-toolkit/
 │   ├── probability_and_statistics.md
 │   ├── related_functions.md
 │   └── time_series_analysis.md
-├── QnA/
-│   ├── qna_algorithms.md
-│   ├── qna_devops_mlops.md
-│   ├── qna_ds_ai_ml_nlp_1.md
-│   ├── qna_ds_ai_ml_nlp_2.md
-│   ├── qna_keras_tensorflow.md
-│   ├── qna_math_for_ds.md
-│   ├── qna_python.md
-│   ├── qna_pytorch.md
-│   ├── qna_sql.md
 ├── quick_overviews/
 │   ├── 1_python_dsa.md
 │   ├── 2_maths_for_ds.md
@@ -81,6 +81,7 @@ This directory contains markdown files with essential commands for various tools
 - `bash.md`: Common Bash commands for file manipulation and data processing.
 - `docker.md`: Docker commands for containerization of data science projects.
 - `git.md`: Git commands for version control of your projects.
+- `sql.md`: SQL commands related to DS task.
 
 ### Concepts
 This directory houses markdown files explaining key concepts in data science:
