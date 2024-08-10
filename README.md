@@ -20,9 +20,18 @@ The Data Science Toolkit is a curated collection of resources covering a wide ra
 
 ```
 data-science-toolkit/
-├── README.md
-├── LICENSE
 ├── .gitignore
+├── LICENSE
+├── qna_algorithms.md
+├── qna_devops_mlops.md
+├── qna_ds_ai_ml_nlp_1.md
+├── qna_ds_ai_ml_nlp_2.md
+├── qna_keras_tensorflow.md
+├── qna_math_for_ds.md
+├── qna_python.md
+├── qna_pytorch.md
+├── qna_sql.md
+├── README.md
 ├── commands/
 │   ├── bash_commands.md
 │   ├── docker_commands.md
@@ -35,7 +44,9 @@ data-science-toolkit/
 │   ├── linear_algebra.md
 │   ├── machine_learning.md
 │   ├── nlp.md
-│   └── probability_and_statistics.md
+│   ├── probability_and_statistics.md
+│   ├── related_functions.md
+│   └── time_series_analysis.md
 ├── quick_overviews/
 │   ├── 1_python.md
 │   ├── 2_maths_for_ds.md
