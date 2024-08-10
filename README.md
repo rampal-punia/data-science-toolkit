@@ -24,9 +24,10 @@ data-scientists-toolkit/
 ├── LICENSE
 ├── .gitignore
 ├── commands/
-│   ├── bash.md
-│   ├── docker.md
-│   ├── git.md
+│   ├── bash_commands.md
+│   ├── docker_commands.md
+│   ├── git_commands.md
+│   ├── sql_commands.md
 ├── concepts/
 │   ├── ai.md
 │   ├── calculus.md
@@ -45,7 +46,6 @@ data-scientists-toolkit/
     ├── data_visualization_examples.ipynb
     ├── deep_learning_examples.ipynb
     ├── machine_learning_examples.ipynb
-    ├── sql_examples.ipynb
     └── statistics_examples.ipynb
 ```
 
