@@ -1,15 +1,16 @@
-# 21 Most Important Python Interview Queestions
+# Important Python Queestion Answers
 
-## Question: 
+## Question: Can you explain a situation where it is preferrable to choose a list over a tuple in Python, and vice versa?
 
-Can you explain a situation where you'd choose a list over a tuple in Python, and vice versa?
-
-## Answer:
+### Answer:
 Choosing a list over a tuple, and vice versa:
 
-I'd choose a list when I need a mutable sequence, like for a shopping cart where items can be added or removed. Lists are great for dynamic data that changes frequently. On the other hand, I'd use a tuple for immutable data, such as coordinates (x, y, z) or RGB color values. Tuples are perfect for representing fixed collections of items, especially when used as dictionary keys or in sets. They also provide a slight performance advantage due to their immutability.
+A list is chosen when a mutable sequence is required, like for a shopping cart where items can be added or removed. Lists are great for dynamic data that changes frequently. 
+
+On the other hand, a tuple is preferrable for immutable data, such as coordinates (x, y, z) or RGB color values. Tuples are perfect for representing fixed collections of items, especially when used as dictionary keys or in sets. They also provide a slight performance advantage due to their immutability.
 
 ## Question:
+
 - Imagine you're working on a project that requires frequent data lookups. How would you implement this using Python's data structures, and why?
 
 ## Answer:
