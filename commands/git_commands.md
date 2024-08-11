@@ -173,3 +173,111 @@ git submodule update --remote
 ```
 
 Remember to replace `commit_hash`, `branch_name`, `filename`, etc., with actual values when using these commands. Always be cautious when using commands that can potentially discard changes (like `git reset --hard`).
+
+---
+
+# Git Workflow Guide: Managing Master, Development & Feature Branches
+
+## Setup
+
+1. Ensure you have both `master` and `development` branches locally and on GitHub.
+2. Set `development` as your default working branch:
+   ```
+   git checkout development
+   ```
+
+## Daily Workflow
+
+1. Start your workday by updating your local `development` branch:
+   ```
+   git checkout development
+   git pull origin development
+   ```
+
+2. Create a new feature branch for your work:
+   ```
+   git checkout -b feature/your-feature-name
+   ```
+
+3. Work on your feature, making commits as you go:
+   ```
+   git add .
+   git commit -m "Descriptive commit message"
+   ```
+
+4. When your feature is complete, update your local `development` branch and merge it into your feature branch:
+   ```
+   git checkout development
+   git pull origin development
+   git checkout feature/your-feature-name
+   git merge development
+   ```
+
+5. Resolve any merge conflicts if they occur.
+
+6. Push your feature branch to GitHub:
+   ```
+   git push origin feature/your-feature-name
+   ```
+
+7. Create a pull request on GitHub from your feature branch to the `development` branch.
+
+8. After review and approval, merge the pull request on GitHub.
+
+9. Delete the feature branch on GitHub after merging.
+
+10. Update your local `development` branch and delete the local feature branch:
+    ```
+    git checkout development
+    git pull origin development
+    git branch -d feature/your-feature-name
+    ```
+
+## Updating Master
+
+Periodically (e.g., for releases), you'll want to update the `master` branch:
+
+1. Ensure `development` is up to date:
+   ```
+   git checkout development
+   git pull origin development
+   ```
+
+2. Merge `development` into `master`:
+   ```
+   git checkout master
+   git merge development
+   ```
+
+3. Push the updated `master` to GitHub:
+   ```
+   git push origin master
+   ```
+
+## Tips
+
+- Always check which branch you're on with `git branch` before starting work.
+- Use `git status` frequently to see your current state.
+- Consider using a Git GUI tool like GitKraken or SourceTree for a visual representation of your branches.
+- Set up Git aliases for common commands to save time.
+
+## Branch Cleanup
+
+Periodically, clean up old feature branches:
+
+1. Update your local branch list:
+   ```
+   git fetch -p
+   ```
+
+2. List merged branches:
+   ```
+   git branch --merged
+   ```
+
+3. Delete old feature branches:
+   ```
+   git branch -d feature/old-feature-name
+   ```
+
+Remember, communication with your team about branch usage and merging strategies is key to a smooth workflow.
