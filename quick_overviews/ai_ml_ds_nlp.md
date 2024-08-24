@@ -799,3 +799,34 @@ Here’s a list of Important keywords related to Natural Language Processing (NL
 ### **51. Dependency Tree**
 - **Definition**: A tree representation of the grammatical structure of a sentence, where words are connected based on their dependencies, used in syntactic parsing.
 
+
+## Sentiment Analysis, Intent Recognition & Topic Modeling 
+
+- A concise explanation of the differences between sentiment analysis, intent recognition, and topic modeling in the context of language models:
+
+### Sentiment Analysis:
+
+- **Purpose**: Determines the emotional tone or attitude expressed in text.
+- **Output**: Usually categorizes text as positive, negative, or neutral.
+- **Example**: "This product is amazing!" → Positive sentiment
+
+
+### Intent Recognition:
+
+- **Purpose**: Identifies the user's goal or purpose in a given statement or query.
+- **Output**: Classifies the intent into predefined categories.
+- **Example**: "What's the weather like today?" → Intent: Get weather information
+
+
+Topic Modeling:
+
+
+- **Purpose**: Discovers abstract topics within a collection of documents.
+- **Output**: Identifies main themes and their distribution across documents.
+- **Example**: Given a set of news articles, it might identify topics like "politics," "sports," "technology," etc.
+
+### Key differences:
+
+- Sentiment analysis focuses on emotion, intent recognition on user goals, and topic modeling on thematic content.
+- Sentiment analysis and intent recognition typically work on individual statements, while topic modeling usually processes larger collections of text.
+- The outputs differ: sentiment analysis provides emotional polarity, intent recognition categorizes purposes, and topic modeling extracts thematic structures.
