@@ -254,6 +254,32 @@ Periodically (e.g., for releases), you'll want to update the `master` branch:
    git push origin master
    ```
 
+## Merging Between Master and Development
+
+When merging between `master` and `development`, the order matters:
+
+1. Merging `development` into `master` (Recommended for releases):
+   ```
+   git checkout master
+   git merge development
+   ```
+   - This brings new features and changes from `development` into `master`.
+   - Typically done for releases or major updates.
+
+2. Merging `master` into `development` (Less common):
+   ```
+   git checkout development
+   git merge master
+   ```
+   - This brings changes from `master` into `development`.
+   - Usually done to sync `development` with hotfixes made directly to `master`.
+
+Key considerations:
+- The branch you're on (checked out) is the one receiving changes.
+- Merging `development` into `master` moves new features to production.
+- Merging `master` into `development` syncs critical fixes back to the development branch.
+- Resolve conflicts on the branch you're merging into.
+
 ## Tips
 
 - Always check which branch you're on with `git branch` before starting work.
@@ -279,5 +305,71 @@ Periodically, clean up old feature branches:
    ```
    git branch -d feature/old-feature-name
    ```
+
+## Workflow for Contributors
+
+Contributors should follow these guidelines:
+
+1. Fork the repository:
+   - On GitHub, create a personal fork of the main project repository.
+
+2. Clone the fork locally:
+   ```
+   git clone https://github.com/your-username/project-name.git
+   cd project-name
+   ```
+
+3. Add the original repository as an upstream remote:
+   ```
+   git remote add upstream https://github.com/original-owner/project-name.git
+   ```
+
+4. Create a feature branch off of `development`:
+   ```
+   git checkout development
+   git pull upstream development
+   git checkout -b feature/your-feature-name
+   ```
+
+5. Work on the feature, committing changes to your feature branch.
+
+6. Regularly sync your `development` branch with the upstream:
+   ```
+   git checkout development
+   git pull upstream development
+   ```
+
+7. Rebase your feature branch on the updated `development`:
+   ```
+   git checkout feature/your-feature-name
+   git rebase development
+   ```
+
+8. Push your feature branch to your fork:
+   ```
+   git push origin feature/your-feature-name
+   ```
+
+9. Create a pull request from your feature branch to the `development` branch of the main repository.
+
+10. After review and approval, a project maintainer will merge the pull request.
+
+11. After merging, sync your fork:
+    ```
+    git checkout development
+    git pull upstream development
+    git push origin development
+    ```
+
+12. Delete your local feature branch:
+    ```
+    git branch -d feature/your-feature-name
+    ```
+
+Key points for contributors:
+- Always work on feature branches, never directly on `master` or `development`.
+- Keep your `development` branch updated with the upstream repository.
+- Use pull requests for all contributions, even if you have write access to the repository.
+- Communicate with maintainers about larger changes before investing significant time.
 
 Remember, communication with your team about branch usage and merging strategies is key to a smooth workflow.
