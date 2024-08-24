@@ -24,21 +24,22 @@ data-science-toolkit/
 ├── LICENSE
 ├── README.md
 ├── QnA/
-│   ├── qna_algorithms.md
-│   ├── qna_devops_mlops.md
-│   ├── qna_ds_ai_ml_nlp_1.md
-│   ├── qna_ds_ai_ml_nlp_2.md
-│   ├── qna_keras_tensorflow.md
-│   ├── qna_math_for_ds.md
-│   ├── qna_python.md
-│   ├── qna_pytorch.md
-│   ├── qna_sql.md
+│   ├── devops_mlops_qna.md
+│   ├── ds_ai_ml_nlp_1_qna.md
+│   ├── ds_ai_ml_nlp_2_qna.md
+│   ├── dsa_qna.md
+│   ├── keras_tensorflow_qna.md
+│   ├── math_for_ds_qna.md
+│   ├── python_qna.md
+│   ├── pytorch_qna.md
+│   ├── sql_qna.md
 ├── commands/
 │   ├── bash_commands.md
 │   ├── docker_commands.md
 │   ├── git_commands.md
 │   ├── sql_commands.md
-├── concepts/
+│   ├── readme.md
+├── detailed_concepts/
 │   ├── ai.md
 │   ├── calculus.md
 │   ├── deep_learning.md
@@ -53,6 +54,7 @@ data-science-toolkit/
 │   ├── 2_maths_for_ds.md
 │   ├── 3_ai_ml_ds_nlp.md
 │   └── 4_python_packages.md
+│   └── 5_dsa.md
 └── useful_functions/
     ├── data_visualization_examples.ipynb
     ├── deep_learning_examples.ipynb
