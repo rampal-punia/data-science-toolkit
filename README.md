@@ -55,7 +55,7 @@ data-science-toolkit/
 │   ├── 3_ai_ml_ds_nlp.md
 │   └── 4_python_packages.md
 │   └── 5_dsa.md
-└── useful_functions/
+└── useful_code_examples/
     ├── data_visualization_examples.ipynb
     ├── deep_learning_examples.ipynb
     ├── machine_learning_examples.ipynb
