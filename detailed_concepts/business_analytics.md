@@ -147,6 +147,10 @@ These three types of analysis form a continuum, each building upon the insights 
 2. Predictive analysis uses that information to forecast what might happen.
 3. Prescriptive analysis takes it a step further by recommending actions based on those predictions.
 
+In prescriptive analytics, a model is a mathematical or logical representation that describes the relationship between actions (decisions or interventions) and their impact on the desired goal or outcome. This model allows analysts to understand and predict how different actions will affect the results, enabling them to recommend or prescribe the best course of action to achieve the desired objective.
+
+Prescriptive analytics goes beyond descriptive analytics (what happened) and predictive analytics (what might happen) by focusing on what should be done to achieve a specific goal. The model in prescriptive analytics serves as a crucial tool for understanding the cause-and-effect relationships between actions and outcomes, allowing decision-makers to optimize their strategies.
+
 It's important to note that while these are distinct types of analysis, they often overlap and complement each other in practice. A comprehensive data analysis strategy typically incorporates elements of all three to provide a complete picture of the past, present, and potential future of the data being analyzed.
 
 # Comparison/Relationship of Data Mining, Data Analytics, Business Analytics, and Time Series Analysis
