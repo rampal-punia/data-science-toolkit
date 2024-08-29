@@ -220,4 +220,94 @@ These keywords, formulas, and their extended explanations form the foundation of
 
 51. **Time Series Decomposition**: The process of separating a time series into its underlying components (trend, seasonality, and residuals) to better understand its behavior.
 
+# Stationarity, White Noise, and Statistical Tests
 
+## 1. Key Concepts
+
+### 1.1 Stationarity
+
+Stationarity is a fundamental concept in time series analysis. A time series is considered stationary if its statistical properties remain constant over time.
+
+Key characteristics of a stationary time series:
+- Constant mean
+- Constant variance
+- Constant autocorrelation structure
+
+Importance:
+- Many statistical procedures assume stationarity
+- Allows for meaningful sample statistics and forecasts
+
+### 1.2 White Noise
+
+White noise is a specific type of stationary process. It's a sequence of uncorrelated random variables with certain properties.
+
+Characteristics of white noise:
+- Zero mean
+- Constant variance
+- No autocorrelation between observations
+
+Importance:
+- Often used as a benchmark in time series modeling
+- Residuals of a good model should resemble white noise
+
+### 1.3 Comparison: Stationarity vs. White Noise
+
+Similarities:
+- Both have constant mean and variance over time
+- White noise is always stationary
+
+Differences:
+- Stationarity allows for autocorrelation; white noise does not
+- White noise is a more restrictive condition
+- All white noise processes are stationary, but not all stationary processes are white noise
+
+## 2. Statistical Tests
+
+### 2.1 Ljung-Box Test
+
+Purpose: Tests for autocorrelation in a time series
+
+Null Hypothesis (H0): The data are independently distributed (i.e., the series is white noise)
+Alternative Hypothesis (H1): The data are not independently distributed; they exhibit serial correlation
+
+Approach:
+- Examines autocorrelations of the residuals at various lags
+- Uses a chi-squared statistic to test if the observed autocorrelations are significantly different from zero
+
+Interpretation:
+- If p-value < significance level: Reject H0, conclude the series is not white noise
+- If p-value > significance level: Fail to reject H0, insufficient evidence to conclude the series is not white noise
+
+### 2.2 Dickey-Fuller Test (and Augmented Dickey-Fuller Test)
+
+Purpose: Tests for a unit root in a time series sample
+
+Null Hypothesis (H0): There is a unit root present (i.e., the time series is non-stationary)
+Alternative Hypothesis (H1): The time series is stationary
+
+Approach:
+- Estimates an autoregressive model
+- Examines the significance of the lagged level in explaining the first differences of the series
+
+Interpretation:
+- If p-value < significance level: Reject H0, conclude the series is stationary
+- If p-value > significance level: Fail to reject H0, insufficient evidence to conclude the series is stationary
+
+### 2.3 Comparison: Ljung-Box Test vs. Dickey-Fuller Test
+
+Similarities:
+- Both are statistical hypothesis tests used in time series analysis
+- Both examine properties related to the predictability of a time series
+
+Differences:
+- Focus: Ljung-Box tests for white noise; Dickey-Fuller tests for a specific type of non-stationarity (unit root)
+- Application: Ljung-Box can be applied to raw data or model residuals; Dickey-Fuller is typically applied to the raw time series
+- Interpretation: Failing Ljung-Box suggests predictable patterns; failing Dickey-Fuller suggests the need for differencing or other transformations
+
+## 3. Practical Implications
+
+- The Dickey-Fuller test is often used as a starting point in time series modeling to ensure the series is stationary
+- The Ljung-Box test might be used later to check if the residuals from a fitted model resemble white noise, indicating a good model fit
+- Both tests are often used in conjunction with other tools for a comprehensive understanding of a time series' properties
+
+While these tests provide valuable insights, they should be used alongside visual inspection of plots (like ACF and PACF) and domain knowledge for robust time series analysis.
