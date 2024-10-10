@@ -151,3 +151,21 @@ Here’s a list of Important keywords related to algorithms and data structures 
 
 ### **50. Z-Algorithm**
 - **Definition**: An algorithm that finds all occurrences of a pattern in a text in linear time by computing the Z-array, which contains the lengths of substrings that match the prefix
+
+
+## Algorithm patterns
+- Prefix Sum
+- Two Pointer
+- Sliding Window
+- Fast & Slow Pointer
+- Linked List In-Place Reversal 
+- Monotonic Stack
+- Top 'k' Elements
+- Quick Select
+- Overlapping Intervals
+- Modified Binary Search 
+- Depth-First Search(DFS)
+- Breadth-First Search(BFS)
+-  Matrix Traversal
+-  Backtracking
+-  Dynamic Programming

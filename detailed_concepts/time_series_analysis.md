@@ -350,3 +350,165 @@ Key features:
 - Ljung-Box is often used for model diagnostic checking, while Dickey-Fuller is typically used in the initial stages of time series analysis to determine if differencing is necessary
 
 While the Ljung-Box test helps identify if a series is white noise (uncorrelated), the Dickey-Fuller test determines if a series is stationary (constant statistical properties over time). Both tests play important roles in different stages of time series modeling and analysis.
+
+# ARIMA, SARIMA, and Stationarity in Time Series
+
+## Why ARIMA and SARIMA Models Expect Stationarity
+
+ARIMA and SARIMA models are built on the assumption of stationarity for several important reasons:
+
+1. **Constant Statistical Properties**: Stationary time series have constant statistical properties over time (mean, variance, and autocorrelation structure). This consistency allows the model to learn and apply patterns uniformly across the entire series.
+
+2. **Predictable Behavior**: In a stationary series, the future behaves like the past in a probabilistic sense. This makes forecasting more reliable and interpretable.
+
+3. **Model Stability**: The parameters estimated for ARIMA/SARIMA models are assumed to be constant over time. This assumption holds only if the underlying process is stationary.
+
+4. **Avoiding Spurious Relationships**: Non-stationary series can lead to spurious correlations and unreliable model estimates.
+
+5. **Theoretical Foundation**: The mathematical theory behind ARIMA models is based on stationary processes. The properties and behaviors of these models are well-understood for stationary series.
+
+## The 'I' in ARIMA: Dealing with Non-Stationarity
+
+While ARIMA and SARIMA models expect stationarity, they include a component specifically designed to handle certain types of non-stationarity:
+
+- The 'I' in ARIMA stands for "Integrated" and refers to the differencing process.
+- Differencing can transform many non-stationary series into stationary ones by removing trends and some forms of seasonality.
+- The number of times you need to difference the series to achieve stationarity is represented by the 'd' parameter in ARIMA(p,d,q) models.
+
+## Why These Models Don't Work Well with Non-Stationary Data
+
+When applied to non-stationary time series, ARIMA and SARIMA models can face several issues:
+
+1. **Unreliable Parameter Estimates**: The model's parameters are based on the assumption of constant statistical properties. Non-stationary data violates this assumption, leading to unreliable or meaningless parameter estimates.
+
+2. **Poor Forecasting Performance**: Forecasts based on non-stationary models can quickly diverge from the true process, especially for longer forecast horizons.
+
+3. **Violation of Model Assumptions**: Many statistical tests and confidence intervals used in model diagnostics assume stationarity. These become invalid for non-stationary series.
+
+4. **Persistence of Shocks**: In non-stationary series, shocks can have permanent effects, which ARIMA models are not designed to capture correctly.
+
+5. **Overfitting**: Models fitted to non-stationary data may appear to fit well in-sample but perform poorly out-of-sample due to capturing spurious relationships.
+
+6. **Interpretability Issues**: The interpretation of model components (AR, MA terms) becomes unclear when applied to non-stationary data.
+
+## Addressing Non-Stationarity
+
+To use ARIMA/SARIMA models effectively with non-stationary data:
+
+1. **Identify Non-Stationarity**: Use visual inspection (plots, ACF/PACF) and statistical tests (e.g., Augmented Dickey-Fuller test).
+
+2. **Transform the Data**: Apply appropriate transformations to achieve stationarity:
+   - Differencing for trend stationarity
+   - Seasonal differencing for seasonal patterns
+   - Log transformation for varying variance
+
+3. **Verify Stationarity**: Re-check for stationarity after transformations.
+
+4. **Model Selection**: Choose appropriate ARIMA/SARIMA orders based on the transformed, stationary series.
+
+5. **Inverse Transform**: After modeling and forecasting, apply inverse transformations to return to the original scale.
+
+By ensuring stationarity before applying ARIMA or SARIMA models, analysts can leverage these powerful tools effectively for time series analysis and forecasting.
+
+# AIC and BIC in ARIMA Model Selection
+
+## Introduction
+
+When fitting ARIMA models, we often need to choose the best combination of p (autoregressive order), d (degree of differencing), and q (moving average order). AIC and BIC are two commonly used criteria for this purpose.
+
+## Akaike Information Criterion (AIC)
+
+AIC is founded on information theory. It estimates the relative amount of information lost by a given model: the less information a model loses, the higher the quality of that model.
+
+### Formula:
+AIC = 2k - 2ln(L)
+
+Where:
+- k is the number of parameters in the model
+- L is the maximum value of the likelihood function for the model
+
+### Interpretation:
+- Lower AIC values indicate better models.
+- AIC penalizes model complexity (through k) but not as strongly as BIC.
+
+## Bayesian Information Criterion (BIC)
+
+BIC is closely related to AIC but penalizes model complexity more strongly.
+
+### Formula:
+BIC = ln(n)k - 2ln(L)
+
+Where:
+- n is the number of observations
+- k and L are the same as in AIC
+
+### Interpretation:
+- Like AIC, lower BIC values indicate better models.
+- BIC penalizes model complexity more heavily than AIC, especially for larger sample sizes.
+
+## AIC vs BIC in ARIMA Model Selection
+
+1. **Complexity Penalty**: 
+   - AIC: 2k
+   - BIC: ln(n)k
+   BIC generally leads to simpler models, especially with large sample sizes.
+
+2. **Consistency**: 
+   - BIC is consistent: as n → ∞, it will select the true model (if it's among the candidates).
+   - AIC is not consistent but is efficient: it will select the model that minimizes the mean squared error of prediction.
+
+3. **Model Selection**:
+   - AIC tends to choose more complex models.
+   - BIC tends to choose simpler models.
+
+4. **Sample Size Sensitivity**:
+   - BIC is more sensitive to sample size due to the ln(n) term.
+   - AIC's penalty term doesn't change with sample size.
+
+## Using AIC and BIC for ARIMA Model Selection
+
+1. **Grid Search**: 
+   - Define a range of p, d, and q values.
+   - Fit ARIMA(p,d,q) models for all combinations.
+   - Calculate AIC and BIC for each model.
+
+2. **Model Comparison**:
+   - Select the model with the lowest AIC or BIC.
+   - If AIC and BIC disagree, consider other factors like model interpretability and forecast performance.
+
+3. **Implementation in Python**:
+   ```python
+   import itertools
+   import statsmodels.api as sm
+
+   p = d = q = range(0, 3)
+   pdq = list(itertools.product(p, d, q))
+
+   aic_results = []
+   bic_results = []
+
+   for param in pdq:
+       try:
+           model = sm.tsa.ARIMA(data, order=param)
+           results = model.fit()
+           aic_results.append([param, results.aic])
+           bic_results.append([param, results.bic])
+       except:
+           continue
+
+   # Find best AIC and BIC
+   best_aic = min(aic_results, key=lambda x: x[1])
+   best_bic = min(bic_results, key=lambda x: x[1])
+   ```
+
+## Considerations
+
+1. **Model Parsimony**: BIC often leads to more parsimonious models, which can be preferable for interpretation.
+
+2. **Prediction vs. Explanation**: If the goal is prediction, AIC might be preferred. For explanation or identifying the true model, BIC might be better.
+
+3. **Sample Size**: For small samples, AIC and BIC often agree. For large samples, they may diverge significantly.
+
+4. **Model Adequacy**: Remember that AIC and BIC compare relative model quality. Always check absolute model adequacy through residual analysis and out-of-sample testing.
+
+By using both AIC and BIC, analysts can make informed decisions about ARIMA model selection, balancing model fit and complexity.
